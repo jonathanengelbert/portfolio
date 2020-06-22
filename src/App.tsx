@@ -1,6 +1,7 @@
 import React from 'react';
 import Nav from './components/Nav/Nav';
 import ProjectCard from "./components/ProjectCard/ProjectCard";
+import Header from "./components/Header/Header";
 
 // MATERIAL UI CONFIG
 import Grid from '@material-ui/core/Grid';
@@ -11,9 +12,9 @@ import './appStyles.scss';
 function App() {
     return (
         <div className="app">
-            <header className="App-header">
-            </header>
-            <Nav/>
+            <Nav></Nav>
+            <Header />
+
             <main>
                 <Grid
                     container
@@ -26,7 +27,7 @@ function App() {
                     <Grid item xs={12} sm={6}>
                         <ProjectCard
                             title={'Mapping App Prototype Live Example'}
-                            stack={'React, Typescript, Postgres, PostGIS, Mapbox, AWS'}
+                            stack={'React, Typescript, Docker, Postgres, PostGIS, Mapbox, AWS'}
                             shortDescription={'A Fullstack mapping app that allows users to create, update and delete persistent data'}
                             longDescription={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 

@@ -24,19 +24,19 @@ export default function Nav() {
     const classes = useStyles();
 
     return (
-        <div className={classes.root}>
+        <nav className={classes.root}>
             <AppBar position="static">
                 <Toolbar>
                     <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" className={classes.title}>
-                        Jonathan Engelbert
+                        {/*JE*/}
                     </Typography>
                     <Button color="inherit">Resume</Button>
                     <Button color="inherit">Contact</Button>
                 </Toolbar>
             </AppBar>
-        </div>
+        </nav>
     );
 }
