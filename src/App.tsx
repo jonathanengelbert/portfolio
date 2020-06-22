@@ -8,13 +8,11 @@ import Grid from '@material-ui/core/Grid';
 
 import './appStyles.scss';
 
-
 function App() {
     return (
         <div className="app">
-            <Nav></Nav>
-            <Header />
-
+            <Nav />
+            <Header/>
             <main>
                 <Grid
                     container
