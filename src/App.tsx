@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Nav from './components/Nav/Nav';
 import ProjectCard from "./components/ProjectCard/ProjectCard";
 import Header from "./components/Header/Header";
+import Contact from "./components/Contact/Contact";
+import ContactForm from "./components/Contact/ContactForm";
 
 // MATERIAL UI CONFIG
 import Grid from '@material-ui/core/Grid';
@@ -10,10 +12,18 @@ import './appStyles.scss';
 
 
 function App() {
+    const [formOpen, setFormOpen] = useState<boolean>(false);
     return (
         <div className="app">
-            <Nav></Nav>
-            <Header />
+            <Nav
+                setFormOpen={setFormOpen}
+                formOpen={formOpen}
+            ></Nav>
+            <Header/>
+            <ContactForm
+                setFormOpen={setFormOpen}
+                formOpen={formOpen}
+            />
 
             <main>
                 <Grid
