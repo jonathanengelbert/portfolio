@@ -22,7 +22,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 const useStyles = makeStyles((theme) => ({
     root: {
         // maxWidth: '61%',
-        color: 'white',
+        // color: 'black',
         // fontWeight: 900,
         backgroundColor: '#d0d5d3',
     },
