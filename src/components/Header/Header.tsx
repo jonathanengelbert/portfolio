@@ -20,13 +20,13 @@ const Header = () => {
 
                 onClick={() => openInNewWindow('https://github.com/jonathanengelbert')}
             >
-                <GitHubIcon fontSize={"large"}/>
+                <GitHubIcon fontSize={"large"} style={{color: "white"}}/>
             </IconButton>
             <IconButton
                 aria-label="Source Code"
                 onClick={() => openInNewWindow('https://www.linkedin.com/in/jonathan-engelbert/')}
             >
-                <LinkedInIcon fontSize={"large"}/>
+                <LinkedInIcon fontSize={"large"} style={{color: "white"}}/>
             </IconButton>
         </header>
     )
