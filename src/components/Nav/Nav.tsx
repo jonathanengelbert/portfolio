@@ -31,11 +31,11 @@ export default function Nav() {
 
     return (
         <nav className={classes.root}>
-            <AppBar position="static">
+            <AppBar position="sticky">
                 <Toolbar>
-                    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                        <MenuIcon/>
-                    </IconButton>
+                    {/*<IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">*/}
+                    {/*    <MenuIcon/>*/}
+                    {/*</IconButton>*/}
                     <Typography variant="h6" className={classes.title}>
                         <p className={"logo"}>Jonathan Engelbert</p>
                     </Typography>

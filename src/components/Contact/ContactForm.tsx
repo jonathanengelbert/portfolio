@@ -1,17 +1,23 @@
-import React from 'react';
-import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
+import React, {useState} from 'react';
+
+// MATERIAL UI config
+
+import {makeStyles, Theme, createStyles} from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
-import { TextField } from '@material-ui/core';
+import {TextField} from '@material-ui/core';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
             '& > *': {
                 margin: theme.spacing(1),
-                width: '25ch',
+                width: '20ch',
             },
+            display: 'flex',
+            flexDirection: 'column'
         },
         modal: {
             display: 'flex',
@@ -28,11 +34,12 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 type Props = {
-   formOpen: boolean,
-   setFormOpen: Function
+    formOpen: boolean,
+    setFormOpen: Function
 }
 
 const ContactForm = (props: Props) => {
+    const [status, setStatus] = useState<string>('');
     const classes = useStyles();
 
     const handleClose = () => {
@@ -63,10 +70,38 @@ const ContactForm = (props: Props) => {
                         <p id="transition-modal-description">
                             I will reply in less than 24 hours
                         </p>
-                        <form className={classes.root} noValidate autoComplete="off">
-                            <TextField id="standard-basic" label="Standard" />
-                            <TextField id="filled-basic" label="Filled" variant="filled" />
-                            <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+                        <form className={classes.root} noValidate autoComplete="off"
+                              onSubmit={() => alert('DONE!')}
+                            // action="https://formspree.io/xdowdbqv"
+                              action="https://yoyoyoy.com"
+                              method="POST"
+                        >
+                            <TextField
+                                id="name"
+                                type="name"
+                                label="Your name"
+                            />
+                            <TextField
+                                id="standard-basic"
+                                type="email"
+                                label="Email"
+                            />
+                            <TextField
+                                id="message"
+                                type="message"
+                                label="Message"
+                                multiline
+                            />
+                            {status === "SUCCESS" ?
+                                <p>Thanks!</p> :
+                                <Button
+                                    variant="contained"
+                                    size="large"
+                                    color="primary"
+                                >Submit
+                                </Button>
+                            }
+                            {status === "ERROR" && <p>Ooops! There was an error.</p>}
                         </form>
                     </div>
                 </Fade>
