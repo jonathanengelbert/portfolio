@@ -5,10 +5,8 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 import './headerStyles.scss';
-import TablePaginationActions from "@material-ui/core/TablePagination/TablePaginationActions";
 import IconButton from "@material-ui/core/IconButton";
 import {openInNewWindow} from "../../utils";
-import CardActions from "@material-ui/core/CardActions";
 
 const Header = () => {
     return (
