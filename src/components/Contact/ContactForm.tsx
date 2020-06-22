@@ -33,17 +33,39 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 
+
 type Props = {
     formOpen: boolean,
     setFormOpen: Function
 }
 
 const ContactForm = (props: Props) => {
-    const [status, setStatus] = useState<string>('');
+    const [status, setStatus] = useState<string | null>(null);
     const classes = useStyles();
+
+    function handleSubmit (event: { preventDefault: () => void; target: any; }) {
+        event.preventDefault();
+        const form = event.target;
+        const data = new FormData(form);
+        const xhr = new XMLHttpRequest();
+        xhr.open(form.method, form.action);
+        form.reportValidity();
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState !== XMLHttpRequest.DONE) return;
+            if (xhr.status === 200) {
+                form.reset();
+                setStatus("SUCCESS" );
+            } else {
+                setStatus("ERROR");
+            }
+        };
+        xhr.send(data);
+    }
 
     const handleClose = () => {
         props.setFormOpen(false);
+        setStatus(null);
     };
 
     return (
@@ -65,36 +87,42 @@ const ContactForm = (props: Props) => {
                 <Fade in={props.formOpen}>
                     <div className={classes.paper}>
                         <h2 id="transition-modal-title">
-                            Send me a Message!
+                            Send me a message!
                         </h2>
                         <p id="transition-modal-description">
                             I will reply in less than 24 hours
                         </p>
                         <form className={classes.root} noValidate autoComplete="off"
-                              onSubmit={() => alert('DONE!')}
-                            // action="https://formspree.io/xdowdbqv"
-                              action="https://yoyoyoy.com"
+                              onSubmit={handleSubmit}
+                              // REAL END POINT
+                              action="https://formspree.io/xdowdbqv"
                               method="POST"
                         >
                             <TextField
                                 id="name"
-                                type="name"
+                                type="text"
+                                name="name"
                                 label="Your name"
                             />
                             <TextField
                                 id="standard-basic"
                                 type="email"
+                                name="email"
                                 label="Email"
+                                required={true}
                             />
                             <TextField
                                 id="message"
-                                type="message"
+                                type="text"
                                 label="Message"
+                                name="message"
+                                required={true}
                                 multiline
                             />
                             {status === "SUCCESS" ?
                                 <p>Thanks!</p> :
                                 <Button
+                                    type="submit"
                                     variant="contained"
                                     size="large"
                                     color="primary"
