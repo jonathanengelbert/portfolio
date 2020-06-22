@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 
@@ -25,12 +25,8 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-type Props = {
-    formOpen: boolean,
-    setFormOpen: Function
-}
-
-export default function Nav(props: Props) {
+export default function Nav() {
+    const [formOpen, setFormOpen] = useState<boolean>(false);
     const classes = useStyles();
 
     return (
@@ -44,9 +40,13 @@ export default function Nav(props: Props) {
                         <p className={"logo"}>Jonathan Engelbert</p>
                     </Typography>
                     <Button color="inherit">Resume</Button>
-                    <Button color="inherit" onClick={() => props.setFormOpen(true)}>
+                    <Button color="inherit" onClick={() => setFormOpen(true)}>
                         Contact
                     </Button>
+                    <ContactForm
+                        setFormOpen={setFormOpen}
+                        formOpen={formOpen}
+                    />
                 </Toolbar>
             </AppBar>
         </nav>

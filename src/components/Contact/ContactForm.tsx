@@ -34,11 +34,6 @@ type Props = {
 
 const ContactForm = (props: Props) => {
     const classes = useStyles();
-    const [open, setOpen] = React.useState(false);
-
-    const handleOpen = () => {
-        props.setFormOpen(true);
-    };
 
     const handleClose = () => {
         props.setFormOpen(false);
