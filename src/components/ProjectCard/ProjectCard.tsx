@@ -54,7 +54,7 @@ type Props = {
     stack: string,
     shortDescription: string,
     longDescription: string,
-    image?: string,
+    image: string,
     githubLink: string;
     liveLink: string;
 }
@@ -78,7 +78,7 @@ const ProjectCard: React.FC<Props> = (props) => {
             />
             <CardMedia
                 className={classes.media}
-                image="/static/images/cards/image-sample.png"
+                image={`/static/images/cards/${props.image}`}
                 title={props.title}
             />
             <CardContent>
