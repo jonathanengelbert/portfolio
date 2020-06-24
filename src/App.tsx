@@ -3,6 +3,10 @@ import Nav from './components/Nav/Nav';
 import ProjectCard from "./components/ProjectCard/ProjectCard";
 import Header from "./components/Header/Header";
 
+// ASSETS
+import mappingTemplateImg from './assets/images/cards/mapping-template.png';
+import daniImg from './assets/images/cards/dani-website.png';
+
 // MATERIAL UI CONFIG
 import Grid from '@material-ui/core/Grid';
 
@@ -25,7 +29,7 @@ function App() {
                         <ProjectCard
                             title={'Full Stack mapping app prototype'}
                             stack={'React, Typescript, Node.js, Docker, Postgres, PostGIS, Mapbox, AWS'}
-                            image={'mapping-template.png'}
+                            image={mappingTemplateImg}
                             shortDescription={'A Fullstack mapping app that allows users to create, update and delete persistent data'}
                             longDescription={`This project is a live example of a fullstack mapping app 
                               template I have been building as an open source contribution. Powered by React and Mapbox
@@ -41,7 +45,7 @@ function App() {
                         <ProjectCard
                             title={'A musician\'s portfolio'}
                             stack={'React, AWS'}
-                            image={'dani-website.png'}
+                            image={daniImg}
                             shortDescription={`A minimalist musician's web portfolio with custom media players`}
                             longDescription={`This web portfolio was made for a client who wanted a minimalist yet 
                              attractive website. She was hosting a template on SquareSpace and wanted to switch to 
@@ -54,7 +58,7 @@ function App() {
                         <ProjectCard
                             title={'A musician\'s portfolio'}
                             stack={'React, AWS'}
-                            image={'dani-website.png'}
+                            image={daniImg}
                             shortDescription={`A minimalist musician's web portfolio`}
                             longDescription={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
                               eiusmod tempor deserunt mollit anim id est laborum.`}

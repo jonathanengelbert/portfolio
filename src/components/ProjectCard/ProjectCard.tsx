@@ -78,7 +78,7 @@ const ProjectCard: React.FC<Props> = (props) => {
             />
             <CardMedia
                 className={classes.media}
-                image={`/static/images/cards/${props.image}`}
+                image={props.image}
                 title={props.title}
             />
             <CardContent>

@@ -37,7 +37,7 @@ export default function Nav() {
                     </Typography>
                     <Button
                         color="inherit"
-                        onClick={() => openInNewWindow('/static/documents/jonathanengelbert_resume_2020.pdf')}>
+                        onClick={() => openInNewWindow('/documents/jonathanengelbert_resume_2020.pdf')}>
                         Resume
                     </Button>
                     <Button
