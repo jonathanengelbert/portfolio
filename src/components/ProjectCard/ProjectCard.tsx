@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     },
     media: {
         height: 0,
-        paddingTop: '56.25%', // 16:9
+        paddingTop: '56.25%', // 16:9,
     },
     expand: {
         transform: 'rotate(0deg)',
@@ -77,9 +77,11 @@ const ProjectCard: React.FC<Props> = (props) => {
                 subheader={props.stack}
             />
             <CardMedia
+                id={'picture'}
                 className={classes.media}
                 image={props.image}
                 title={props.title}
+                onClick={() => openInNewWindow(props.liveLink)}
             />
             <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p">
