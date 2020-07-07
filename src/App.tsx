@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from './components/Nav/Nav';
 import ProjectCard from "./components/ProjectCard/ProjectCard";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 // ASSETS
 import mappingTemplateImg from './assets/images/cards/mapping-template.png';
@@ -73,6 +74,7 @@ function App() {
                     </Grid>
                 </Grid>
             </main>
+            <Footer />
         </div>
     );
 }

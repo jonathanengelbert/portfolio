@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: '#d0d5d3',
     },
     header: {
-        color: 'white',
+        color: 'black',
         textShadow: '2px 4px 3px rgba(0,0,0,0.3)',
     },
     media: {
