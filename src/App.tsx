@@ -8,6 +8,7 @@ import Footer from "./components/Footer/Footer";
 import mappingTemplateImg from './assets/images/cards/mapping-template.png';
 import daniImg from './assets/images/cards/dani-website.png';
 import mapping3dPic from './assets/images/cards/3d_mapping_pic.png';
+import mockStorePic from './assets/images/cards/mock-store.png';
 
 // MATERIAL UI CONFIG
 import Grid from '@material-ui/core/Grid';
@@ -29,6 +30,20 @@ function App() {
                 >
                     <Grid item xs={12} sm={6}>
                         <ProjectCard
+                            title={'E-Commerce Mock Store'}
+                            stack={'React, AWS, Node.js, SASS'}
+                            image={mockStorePic}
+                            shortDescription={`An E-Commerce website for a mock store, built with React`}
+
+                            longDescription={`(Under construction, completion estimated 07/25/2020). This fullstack 
+                            website has its pictures and assets served from a MongoDB database, with a Node.js backend. 
+                            Built with React and Bootstrap in the front-end`}
+                            githubLink={'https://github.com/jonathanengelbert/mock-store'}
+                            liveLink={'https://mock-store.jonathanengelbert.com'}
+                        />
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                        <ProjectCard
                             title={'3D Mapping Example'}
                             stack={'React, AWS, Cesium, Blender'}
                             image={mapping3dPic}
@@ -40,6 +55,18 @@ function App() {
                             and OpenStreet Maps`}
                             githubLink={'https://github.com/jonathanengelbert/cesium-react-example'}
                             liveLink={'https://3d-mapping-example.jonathanengelbert.com/'}
+                        />
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                        <ProjectCard
+                            title={'A musician\'s portfolio'}
+                            stack={'React, AWS'}
+                            image={daniImg}
+                            shortDescription={`A minimalist musician's web portfolio`}
+                            longDescription={`This web portfolio was made for a client who wanted a minimalist yet 
+                             something she could truly personalized. The design was largely provided by the client`}
+                            githubLink={'https://github.com/jonathanengelbert/dani-portfolio-2019'}
+                            liveLink={'https://danielletatarian.com/'}
                         />
                     </Grid>
                     <Grid item xs={12} sm={6}>
@@ -57,19 +84,6 @@ function App() {
                               running on Docker, in an AWS EC2 instance`}
                             githubLink={'https://github.com/jonathanengelbert/mapping-app-prototype-live-example'}
                             liveLink={'https://crud-mapbox-example.jonathanengelbert.com/'}
-                        />
-                    </Grid>
-                    <Grid item xs={12} sm={6}>
-                        <ProjectCard
-                            title={'A musician\'s portfolio'}
-                            stack={'React, AWS'}
-                            image={daniImg}
-                            shortDescription={`A minimalist musician's web portfolio`}
-                            longDescription={`This web portfolio was made for a client who wanted a minimalist yet 
-                             attractive website. She was hosting a template on SquareSpace and wanted to switch to 
-                             something she could truly personalized. The design was largely provided by the client`}
-                            githubLink={'https://github.com/jonathanengelbert/dani-portfolio-2019'}
-                            liveLink={'https://danielletatarian.com/'}
                         />
                     </Grid>
                 </Grid>
