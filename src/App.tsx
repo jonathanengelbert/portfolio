@@ -5,7 +5,6 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
 // ASSETS
-import mappingTemplateImg from './assets/images/cards/mapping-template.png';
 import daniImg from './assets/images/cards/dani-website.png';
 import mapping3dPic from './assets/images/cards/3d_mapping_pic.png';
 import mockStorePic from './assets/images/cards/mock-store.png';
@@ -67,23 +66,6 @@ function App() {
                              something she could truly personalized. The design was largely provided by the client`}
                             githubLink={'https://github.com/jonathanengelbert/dani-portfolio-2019'}
                             liveLink={'https://danielletatarian.com/'}
-                        />
-                    </Grid>
-                    <Grid item xs={12} sm={6}>
-                        <ProjectCard
-                            title={'Full Stack mapping app prototype'}
-                            stack={'React, Typescript, Node.js, Docker, Postgres, PostGIS, Mapbox, AWS'}
-                            image={mappingTemplateImg}
-                            shortDescription={'A Full stack mapping component that allows users to create, update and delete ' +
-                            'persistent data'}
-                            longDescription={`This project is a live example of a full stack mapping component 
-                              template I have been building as an open source contribution. Powered by React and Mapbox
-                              in the frontend, the application communicates with an API also built by me, which performs
-                              CRUD operations on a Postgres Database with PostGIS extension enabled. Infrastructure 
-                              consists of an amplify frontend SPA, databases living in AWS RDS and a node server 
-                              running on Docker, in an AWS EC2 instance`}
-                            githubLink={'https://github.com/jonathanengelbert/mapping-app-prototype-live-example'}
-                            liveLink={'https://crud-mapbox-example.jonathanengelbert.com/'}
                         />
                     </Grid>
                 </Grid>
